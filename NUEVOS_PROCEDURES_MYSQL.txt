@@ -395,3 +395,41 @@ END $$
 
 DELIMITER ;
 
+DELIMITER $$
+
+CREATE PROCEDURE BUSCAR_PROPIETARIO_X_NOMBRE(
+    IN p_nombre VARCHAR(50)
+)
+BEGIN
+    SELECT id, dni, nombres, apellidos, direccion
+    FROM propietario
+    WHERE nombres LIKE CONCAT('%', p_nombre, '%');
+END $$
+
+DELIMITER ;
+DELIMITER $$
+
+CREATE PROCEDURE BUSCAR_PROPIETARIO_X_NOMBRE_DNI(
+    IN p_cadena VARCHAR(50)
+)
+BEGIN
+    SELECT id, dni, nombres, apellidos, direccion
+    FROM propietario
+    WHERE nombres LIKE CONCAT('%', p_cadena, '%')
+    or dni LIKE CONCAT('%', p_cadena, '%');
+END $$
+
+DELIMITER ;
+DELIMITER $$
+
+CREATE PROCEDURE OBTENER_CAPTURAS_X_RANGO_FECHAS(
+    IN p_fecha_inicio DATETIME,
+    IN p_fecha_fin DATETIME
+)
+BEGIN
+    SELECT id, id_camara, placa, velocidad, fecha_captura, estado
+    FROM captura
+    WHERE fecha_captura BETWEEN p_fecha_inicio AND p_fecha_fin;
+END $$
+
+DELIMITER ;

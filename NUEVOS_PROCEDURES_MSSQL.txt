@@ -1,0 +1,442 @@
+CREATE PROCEDURE INSERTAR_VEHICULO
+(
+    @id INT OUTPUT,
+    @placa CHAR(7),
+    @marca VARCHAR(20),
+    @modelo VARCHAR(20),
+    @anho INT
+)
+AS
+BEGIN
+    INSERT INTO vehiculo(placa, marca, modelo, anho)
+    VALUES(@placa, @marca, @modelo, @anho);
+
+    SET @id = SCOPE_IDENTITY();
+END
+GO
+CREATE PROCEDURE MODIFICAR_VEHICULO
+(
+    @id INT,
+    @placa CHAR(7),
+    @marca VARCHAR(20),
+    @modelo VARCHAR(20),
+    @anho INT
+)
+AS
+BEGIN
+    UPDATE vehiculo
+    SET placa = @placa,
+        marca = @marca,
+        modelo = @modelo,
+        anho = @anho
+    WHERE id = @id;
+END
+GO
+CREATE PROCEDURE ELIMINAR_VEHICULO
+(
+    @id INT
+)
+AS
+BEGIN
+    DELETE FROM vehiculo WHERE id = @id;
+END
+GO
+CREATE PROCEDURE OBTENER_VEHICULO_X_ID
+(
+    @id INT
+)
+AS
+BEGIN
+    SELECT id, placa, marca, modelo, anho
+    FROM vehiculo
+    WHERE id = @id;
+END
+GO
+CREATE PROCEDURE LISTAR_VEHICULOS_TODOS
+AS
+BEGIN
+    SELECT id, placa, marca, modelo, anho FROM vehiculo;
+END
+GO
+
+CREATE PROCEDURE INSERTAR_PROPIETARIO
+(
+    @id INT OUTPUT,
+    @dni CHAR(8),
+    @nombres VARCHAR(50),
+    @apellidos VARCHAR(50),
+    @direccion VARCHAR(100)
+)
+AS
+BEGIN
+    INSERT INTO propietario(dni, nombres, apellidos, direccion)
+    VALUES(@dni, @nombres, @apellidos, @direccion);
+
+    SET @id = SCOPE_IDENTITY();
+END
+GO
+CREATE PROCEDURE MODIFICAR_PROPIETARIO
+(
+    @id INT,
+    @dni CHAR(8),
+    @nombres VARCHAR(50),
+    @apellidos VARCHAR(50),
+    @direccion VARCHAR(100)
+)
+AS
+BEGIN
+    UPDATE propietario
+    SET dni = @dni,
+        nombres = @nombres,
+        apellidos = @apellidos,
+        direccion = @direccion
+    WHERE id = @id;
+END
+GO
+CREATE PROCEDURE ELIMINAR_PROPIETARIO
+(
+    @id INT
+)
+AS
+BEGIN
+    DELETE FROM propietario WHERE id = @id;
+END
+GO
+CREATE PROCEDURE OBTENER_PROPIETARIO_X_ID
+(
+    @id INT
+)
+AS
+BEGIN
+    SELECT id, dni, nombres, apellidos, direccion
+    FROM propietario
+    WHERE id = @id;
+END
+GO
+CREATE PROCEDURE LISTAR_PROPIETARIOS_TODOS
+AS
+BEGIN
+    SELECT id, dni, nombres, apellidos, direccion
+    FROM propietario;
+END
+GO
+
+CREATE PROCEDURE INSERTAR_CAMARA
+(
+    @id INT OUTPUT,
+    @modelo VARCHAR(20),
+    @codigo_serie VARCHAR(20),
+    @latitud INT,
+    @longitud INT
+)
+AS
+BEGIN
+    INSERT INTO camara(modelo, codigo_serie, latitud, longitud)
+    VALUES(@modelo, @codigo_serie, @latitud, @longitud);
+
+    SET @id = SCOPE_IDENTITY();
+END
+GO
+CREATE PROCEDURE MODIFICAR_CAMARA
+(
+    @id INT,
+    @modelo VARCHAR(20),
+    @codigo_serie VARCHAR(20),
+    @latitud INT,
+    @longitud INT
+)
+AS
+BEGIN
+    UPDATE camara
+    SET modelo = @modelo,
+        codigo_serie = @codigo_serie,
+        latitud = @latitud,
+        longitud = @longitud
+    WHERE id = @id;
+END
+GO
+CREATE PROCEDURE ELIMINAR_CAMARA
+(
+    @id INT
+)
+AS
+BEGIN
+    DELETE FROM camara WHERE id = @id;
+END
+GO
+CREATE PROCEDURE OBTENER_CAMARA_X_ID
+(
+    @id INT
+)
+AS
+BEGIN
+    SELECT id, modelo, codigo_serie, latitud, longitud
+    FROM camara
+    WHERE id = @id;
+END
+GO
+CREATE PROCEDURE LISTAR_CAMARAS_TODAS
+AS
+BEGIN
+    SELECT id, modelo, codigo_serie, latitud, longitud
+    FROM camara;
+END
+GO
+
+CREATE PROCEDURE INSERTAR_CAPTURA
+(
+    @id INT OUTPUT,
+    @id_camara INT,
+    @placa CHAR(7),
+    @velocidad FLOAT,
+    @fecha_captura DATETIME,
+    @estado VARCHAR(15)
+)
+AS
+BEGIN
+    INSERT INTO captura(id_camara, placa, velocidad, fecha_captura, estado)
+    VALUES(@id_camara, @placa, @velocidad, @fecha_captura, @estado);
+
+    SET @id = SCOPE_IDENTITY();
+END
+GO
+CREATE PROCEDURE MODIFICAR_CAPTURA
+(
+    @id INT,
+    @id_camara INT,
+    @placa CHAR(7),
+    @velocidad FLOAT,
+    @fecha_captura DATETIME,
+    @estado VARCHAR(15)
+)
+AS
+BEGIN
+    UPDATE captura
+    SET id_camara = @id_camara,
+        placa = @placa,
+        velocidad = @velocidad,
+        fecha_captura = @fecha_captura,
+        estado = @estado
+    WHERE id = @id;
+END
+GO
+CREATE PROCEDURE MODIFICAR_CAPTURA
+(
+    @id INT,
+    @id_camara INT,
+    @placa CHAR(7),
+    @velocidad FLOAT,
+    @fecha_captura DATETIME,
+    @estado VARCHAR(15)
+)
+AS
+BEGIN
+    UPDATE captura
+    SET id_camara = @id_camara,
+        placa = @placa,
+        velocidad = @velocidad,
+        fecha_captura = @fecha_captura,
+        estado = @estado
+    WHERE id = @id;
+END
+GO
+CREATE PROCEDURE ELIMINAR_CAPTURA
+(
+    @id INT
+)
+AS
+BEGIN
+    DELETE FROM captura WHERE id = @id;
+END
+GO
+CREATE PROCEDURE OBTENER_CAPTURA_X_ID
+(
+    @id INT
+)
+AS
+BEGIN
+    SELECT id, id_camara, placa, velocidad, fecha_captura, estado
+    FROM captura
+    WHERE id = @id;
+END
+GO
+CREATE PROCEDURE LISTAR_CAPTURAS_TODAS
+AS
+BEGIN
+    SELECT id, id_camara, placa, velocidad, fecha_captura, estado
+    FROM captura;
+END
+GO
+
+CREATE PROCEDURE INSERTAR_INFRACCION
+(
+    @id INT OUTPUT,
+    @placa CHAR(7),
+    @velocidad FLOAT,
+    @limite FLOAT,
+    @exceso FLOAT,
+    @vehiculo_marca VARCHAR(20),
+    @vehiculo_modelo VARCHAR(20),
+    @vehiculo_anho INT,
+    @propietario_dni CHAR(8),
+    @propietario_nombres VARCHAR(50),
+    @propietario_apellidos VARCHAR(50),
+    @propietario_direccion VARCHAR(100),
+    @id_camara INT,
+    @camara_modelo VARCHAR(20),
+    @camara_codigo_serie VARCHAR(20),
+    @camara_latitud INT,
+    @camara_longitud INT,
+    @monto DECIMAL(10,2),
+    @fecha_captura DATETIME,
+    @fecha_registro DATETIME
+)
+AS
+BEGIN
+    INSERT INTO infraccion(
+        placa, velocidad, limite, exceso,
+        vehiculo_marca, vehiculo_modelo, vehiculo_anho,
+        propietario_dni, propietario_nombres, propietario_apellidos, propietario_direccion,
+        id_camara, camara_modelo, camara_codigo_serie, camara_latitud, camara_longitud,
+        monto, fecha_captura, fecha_registro
+    )
+    VALUES(
+        @placa, @velocidad, @limite, @exceso,
+        @vehiculo_marca, @vehiculo_modelo, @vehiculo_anho,
+        @propietario_dni, @propietario_nombres, @propietario_apellidos, @propietario_direccion,
+        @id_camara, @camara_modelo, @camara_codigo_serie, @camara_latitud, @camara_longitud,
+        @monto, @fecha_captura, @fecha_registro
+    );
+
+    SET @id = SCOPE_IDENTITY();
+END
+GO
+CREATE PROCEDURE MODIFICAR_INFRACCION
+(
+    @id INT,
+    @placa CHAR(7),
+    @velocidad FLOAT,
+    @limite FLOAT,
+    @exceso FLOAT,
+    @vehiculo_marca VARCHAR(20),
+    @vehiculo_modelo VARCHAR(20),
+    @vehiculo_anho INT,
+    @propietario_dni CHAR(8),
+    @propietario_nombres VARCHAR(50),
+    @propietario_apellidos VARCHAR(50),
+    @propietario_direccion VARCHAR(100),
+    @id_camara INT,
+    @camara_modelo VARCHAR(20),
+    @camara_codigo_serie VARCHAR(20),
+    @camara_latitud INT,
+    @camara_longitud INT,
+    @monto DECIMAL(10,2),
+    @fecha_captura DATETIME,
+    @fecha_registro DATETIME
+)
+AS
+BEGIN
+    UPDATE infraccion
+    SET 
+        placa = @placa,
+        velocidad = @velocidad,
+        limite = @limite,
+        exceso = @exceso,
+        vehiculo_marca = @vehiculo_marca,
+        vehiculo_modelo = @vehiculo_modelo,
+        vehiculo_anho = @vehiculo_anho,
+        propietario_dni = @propietario_dni,
+        propietario_nombres = @propietario_nombres,
+        propietario_apellidos = @propietario_apellidos,
+        propietario_direccion = @propietario_direccion,
+        id_camara = @id_camara,
+        camara_modelo = @camara_modelo,
+        camara_codigo_serie = @camara_codigo_serie,
+        camara_latitud = @camara_latitud,
+        camara_longitud = @camara_longitud,
+        monto = @monto,
+        fecha_captura = @fecha_captura,
+        fecha_registro = @fecha_registro
+    WHERE id = @id;
+END
+GO
+CREATE PROCEDURE ELIMINAR_INFRACCION
+(
+    @id INT
+)
+AS
+BEGIN
+    DELETE FROM infraccion
+    WHERE id = @id;
+END
+GO
+CREATE PROCEDURE OBTENER_INFRACCION_X_ID
+(
+    @id INT
+)
+AS
+BEGIN
+    SELECT *
+    FROM infraccion
+    WHERE id = @id;
+END
+GO
+CREATE PROCEDURE LISTAR_INFRACCIONES_TODAS
+AS
+BEGIN
+    SELECT * FROM infraccion;
+END
+GO
+
+
+CREATE PROCEDURE sp_buscarVehiculoPorPlaca
+(
+    @placa VARCHAR(10)
+)
+AS
+BEGIN
+    SELECT placa, marca, modelo
+    FROM vehiculo
+    WHERE placa = @placa;
+END
+GO
+CREATE PROCEDURE sp_listarPropietariosPorPlaca
+(
+    @placa VARCHAR(10)
+)
+AS
+BEGIN
+    SELECT 
+        p.id,
+        p.dni,
+        p.nombres,
+        p.apellidos,
+        p.direccion
+    FROM vehiculo v
+    INNER JOIN vehiculo_propietario vp
+        ON v.id = vp.id_vehiculo
+    INNER JOIN propietario p
+        ON p.id = vp.id_propietario
+    WHERE v.placa = @placa;
+END
+GO
+
+CREATE OR ALTER PROCEDURE BUSCAR_PROPIETARIO_X_NOMBRE
+    @nombre VARCHAR(50)
+AS
+BEGIN
+    SELECT id, dni, nombres, apellidos, direccion
+    FROM propietario
+    WHERE nombres LIKE '%' + @nombre + '%';
+END
+GO
+CREATE OR ALTER PROCEDURE OBTENER_CAPTURAS_X_RANGO_FECHAS
+    @fecha_inicio DATETIME,
+    @fecha_fin DATETIME
+AS
+BEGIN
+    SELECT id, id_camara, placa, velocidad, fecha_captura, estado
+    FROM captura
+    WHERE fecha_captura BETWEEN @fecha_inicio AND @fecha_fin;
+END
+GO

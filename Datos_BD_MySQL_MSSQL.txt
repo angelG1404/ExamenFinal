@@ -1,0 +1,19 @@
+MySQL
+hostname->base-datos-p3.cjdbmfpgkvrx.us-east-1.rds.amazonaws.com
+username->admin
+password->14angel042004
+
+En C# MySQL driver -> connector/NET
+
+MSSQL
+Autenticacion->SQL Server Autenticacion
+hostname->bd-mssql-prog3.c9i0wwksuaza.us-east-1.rds.amazonaws.com
+username->admin
+password->14angel042004
+trust server certificate
+
+aws
+usuario -> a20222898@pucp.edu.pe
+password-> angel1404
+
+ALTER TABLE categoria AUTO_INCREMENT = 1;
