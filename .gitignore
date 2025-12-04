@@ -1,0 +1,21 @@
+# Carpetas compiladas
+target/
+build/
+dist/
+
+# NetBeans
+nb-configuration.xml
+nbproject/private/
+
+# Archivos temporales
+*.log
+*.tmp
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# IDEs
+.idea/
+.vscode/
+*.iml
