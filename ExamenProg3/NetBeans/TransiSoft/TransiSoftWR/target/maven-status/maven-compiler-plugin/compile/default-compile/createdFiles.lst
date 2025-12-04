@@ -1,0 +1,6 @@
+pe\edu\pucp\transisoft\services\general\CapturaWR.class
+pe\edu\pucp\transisoft\services\ServiciosREST.class
+pe\edu\pucp\transisoft\services\general\CamaraWR.class
+pe\edu\pucp\transisoft\services\general\InfraccionWR.class
+pe\edu\pucp\transisoft\services\general\PropietarioWR.class
+pe\edu\pucp\transisoft\services\general\VehiculoWR.class

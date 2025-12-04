@@ -1,0 +1,11 @@
+pe\edu\pucp\transisoft\services\general\InfraccionWS$1.class
+pe\edu\pucp\transisoft\services\general\CamaraWS$1.class
+pe\edu\pucp\transisoft\services\general\PropietarioWS$1.class
+pe\edu\pucp\transisoft\services\general\VehiculoWS.class
+pe\edu\pucp\transisoft\services\general\InfraccionWS.class
+pe\edu\pucp\transisoft\services\general\PropietarioWS.class
+pe\edu\pucp\transisoft\services\general\CapturaWS$1.class
+pe\edu\pucp\transisoft\services\base\HttpJsonClient.class
+pe\edu\pucp\transisoft\services\general\CapturaWS.class
+pe\edu\pucp\transisoft\services\general\CamaraWS.class
+pe\edu\pucp\transisoft\services\general\VehiculoWS$1.class

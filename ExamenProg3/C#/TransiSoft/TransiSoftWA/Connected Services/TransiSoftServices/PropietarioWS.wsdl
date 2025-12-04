@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://general.services.transisoft.pucp.edu.pe/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="PropietarioWS" targetNamespace="http://general.services.transisoft.pucp.edu.pe/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:8080/TransiSoftWS/PropietarioWS?xsd=1" namespace="http://general.services.transisoft.pucp.edu.pe/" />
+    </xsd:schema>
+  </types>
+  <message name="obtenerPropietarioPorId">
+    <part name="parameters" element="tns:obtenerPropietarioPorId" />
+  </message>
+  <message name="obtenerPropietarioPorIdResponse">
+    <part name="parameters" element="tns:obtenerPropietarioPorIdResponse" />
+  </message>
+  <message name="listarPropietariosTodos">
+    <part name="parameters" element="tns:listarPropietariosTodos" />
+  </message>
+  <message name="listarPropietariosTodosResponse">
+    <part name="parameters" element="tns:listarPropietariosTodosResponse" />
+  </message>
+  <message name="eliminarPropietario">
+    <part name="parameters" element="tns:eliminarPropietario" />
+  </message>
+  <message name="eliminarPropietarioResponse">
+    <part name="parameters" element="tns:eliminarPropietarioResponse" />
+  </message>
+  <message name="modificarPropietario">
+    <part name="parameters" element="tns:modificarPropietario" />
+  </message>
+  <message name="modificarPropietarioResponse">
+    <part name="parameters" element="tns:modificarPropietarioResponse" />
+  </message>
+  <message name="obtenerPropietarioPorPlaca">
+    <part name="parameters" element="tns:obtenerPropietarioPorPlaca" />
+  </message>
+  <message name="obtenerPropietarioPorPlacaResponse">
+    <part name="parameters" element="tns:obtenerPropietarioPorPlacaResponse" />
+  </message>
+  <message name="insertarPropietario">
+    <part name="parameters" element="tns:insertarPropietario" />
+  </message>
+  <message name="insertarPropietarioResponse">
+    <part name="parameters" element="tns:insertarPropietarioResponse" />
+  </message>
+  <portType name="PropietarioWS">
+    <operation name="obtenerPropietarioPorId">
+      <input wsam:Action="http://general.services.transisoft.pucp.edu.pe/PropietarioWS/obtenerPropietarioPorIdRequest" message="tns:obtenerPropietarioPorId" />
+      <output wsam:Action="http://general.services.transisoft.pucp.edu.pe/PropietarioWS/obtenerPropietarioPorIdResponse" message="tns:obtenerPropietarioPorIdResponse" />
+    </operation>
+    <operation name="listarPropietariosTodos">
+      <input wsam:Action="http://general.services.transisoft.pucp.edu.pe/PropietarioWS/listarPropietariosTodosRequest" message="tns:listarPropietariosTodos" />
+      <output wsam:Action="http://general.services.transisoft.pucp.edu.pe/PropietarioWS/listarPropietariosTodosResponse" message="tns:listarPropietariosTodosResponse" />
+    </operation>
+    <operation name="eliminarPropietario">
+      <input wsam:Action="http://general.services.transisoft.pucp.edu.pe/PropietarioWS/eliminarPropietarioRequest" message="tns:eliminarPropietario" />
+      <output wsam:Action="http://general.services.transisoft.pucp.edu.pe/PropietarioWS/eliminarPropietarioResponse" message="tns:eliminarPropietarioResponse" />
+    </operation>
+    <operation name="modificarPropietario">
+      <input wsam:Action="http://general.services.transisoft.pucp.edu.pe/PropietarioWS/modificarPropietarioRequest" message="tns:modificarPropietario" />
+      <output wsam:Action="http://general.services.transisoft.pucp.edu.pe/PropietarioWS/modificarPropietarioResponse" message="tns:modificarPropietarioResponse" />
+    </operation>
+    <operation name="obtenerPropietarioPorPlaca">
+      <input wsam:Action="http://general.services.transisoft.pucp.edu.pe/PropietarioWS/obtenerPropietarioPorPlacaRequest" message="tns:obtenerPropietarioPorPlaca" />
+      <output wsam:Action="http://general.services.transisoft.pucp.edu.pe/PropietarioWS/obtenerPropietarioPorPlacaResponse" message="tns:obtenerPropietarioPorPlacaResponse" />
+    </operation>
+    <operation name="insertarPropietario">
+      <input wsam:Action="http://general.services.transisoft.pucp.edu.pe/PropietarioWS/insertarPropietarioRequest" message="tns:insertarPropietario" />
+      <output wsam:Action="http://general.services.transisoft.pucp.edu.pe/PropietarioWS/insertarPropietarioResponse" message="tns:insertarPropietarioResponse" />
+    </operation>
+  </portType>
+  <binding name="PropietarioWSPortBinding" type="tns:PropietarioWS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="obtenerPropietarioPorId">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarPropietariosTodos">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarPropietario">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarPropietario">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="obtenerPropietarioPorPlaca">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarPropietario">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="PropietarioWS">
+    <port name="PropietarioWSPort" binding="tns:PropietarioWSPortBinding">
+      <soap:address location="http://localhost:8080/TransiSoftWS/PropietarioWS" />
+    </port>
+  </service>
+</definitions>

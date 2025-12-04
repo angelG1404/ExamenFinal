@@ -1,0 +1,7 @@
+pe\edu\pucp\softprog\services\rrhh\AreaWR.class
+pe\edu\pucp\softprog\services\rrhh\CuentaUsuarioWR.class
+pe\edu\pucp\softprog\services\gestclientes\ClienteWR.class
+pe\edu\pucp\softprog\services\almacen\ProductoWR.class
+pe\edu\pucp\softprog\services\rrhh\EmpleadoWR.class
+pe\edu\pucp\softprog\services\ServiciosREST.class
+pe\edu\pucp\softprog\services\ventas\OrdenVentaWR.class

@@ -1,0 +1,68 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\EX2_PROG3\\1INF30-2025-2\\Arquitectura_REST_SOAP\\Frontend\\SoftProg\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{EB0D2B42-BA1A-438B-BA5D-DAE1DEC3AE27}|SoftProgWA\\SoftProgWA.csproj|c:\\ex2_prog3\\1inf30-2025-2\\arquitectura_rest_soap\\frontend\\softprog\\softprogwa\\listarareas.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB0D2B42-BA1A-438B-BA5D-DAE1DEC3AE27}|SoftProgWA\\SoftProgWA.csproj|solutionrelative:softprogwa\\listarareas.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB0D2B42-BA1A-438B-BA5D-DAE1DEC3AE27}|SoftProgWA\\SoftProgWA.csproj|c:\\ex2_prog3\\1inf30-2025-2\\arquitectura_rest_soap\\frontend\\softprog\\softprogwa\\home.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{EB0D2B42-BA1A-438B-BA5D-DAE1DEC3AE27}|SoftProgWA\\SoftProgWA.csproj|solutionrelative:softprogwa\\home.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 1134,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ListarAreas.aspx.cs",
+              "DocumentMoniker": "C:\\EX2_PROG3\\1INF30-2025-2\\Arquitectura_REST_SOAP\\Frontend\\SoftProg\\SoftProgWA\\ListarAreas.aspx.cs",
+              "RelativeDocumentMoniker": "SoftProgWA\\ListarAreas.aspx.cs",
+              "ToolTip": "C:\\EX2_PROG3\\1INF30-2025-2\\Arquitectura_REST_SOAP\\Frontend\\SoftProg\\SoftProgWA\\ListarAreas.aspx.cs",
+              "RelativeToolTip": "SoftProgWA\\ListarAreas.aspx.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-04T03:50:15.112Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Home.aspx",
+              "DocumentMoniker": "C:\\EX2_PROG3\\1INF30-2025-2\\Arquitectura_REST_SOAP\\Frontend\\SoftProg\\SoftProgWA\\Home.aspx",
+              "RelativeDocumentMoniker": "SoftProgWA\\Home.aspx",
+              "ToolTip": "C:\\EX2_PROG3\\1INF30-2025-2\\Arquitectura_REST_SOAP\\Frontend\\SoftProg\\SoftProgWA\\Home.aspx",
+              "RelativeToolTip": "SoftProgWA\\Home.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-12-04T02:06:51.462Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 1134,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

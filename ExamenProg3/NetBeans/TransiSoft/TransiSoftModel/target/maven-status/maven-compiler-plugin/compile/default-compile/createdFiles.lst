@@ -1,0 +1,7 @@
+Model\Vehiculo.class
+Model\VehiculoPropietario.class
+Model\Infraccion.class
+Model\Captura.class
+Model\Camara.class
+Model\Propietario.class
+Model\DateAdapter.class

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://general.services.transisoft.pucp.edu.pe/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="CamaraWS" targetNamespace="http://general.services.transisoft.pucp.edu.pe/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:8080/TransiSoftWS/CamaraWS?xsd=1" namespace="http://general.services.transisoft.pucp.edu.pe/" />
+    </xsd:schema>
+  </types>
+  <message name="modificarCamara">
+    <part name="parameters" element="tns:modificarCamara" />
+  </message>
+  <message name="modificarCamaraResponse">
+    <part name="parameters" element="tns:modificarCamaraResponse" />
+  </message>
+  <message name="listarCamarasTodas">
+    <part name="parameters" element="tns:listarCamarasTodas" />
+  </message>
+  <message name="listarCamarasTodasResponse">
+    <part name="parameters" element="tns:listarCamarasTodasResponse" />
+  </message>
+  <message name="insertarCamara">
+    <part name="parameters" element="tns:insertarCamara" />
+  </message>
+  <message name="insertarCamaraResponse">
+    <part name="parameters" element="tns:insertarCamaraResponse" />
+  </message>
+  <message name="obtenerCamaraPorId">
+    <part name="parameters" element="tns:obtenerCamaraPorId" />
+  </message>
+  <message name="obtenerCamaraPorIdResponse">
+    <part name="parameters" element="tns:obtenerCamaraPorIdResponse" />
+  </message>
+  <message name="eliminarCamara">
+    <part name="parameters" element="tns:eliminarCamara" />
+  </message>
+  <message name="eliminarCamaraResponse">
+    <part name="parameters" element="tns:eliminarCamaraResponse" />
+  </message>
+  <portType name="CamaraWS">
+    <operation name="modificarCamara">
+      <input wsam:Action="http://general.services.transisoft.pucp.edu.pe/CamaraWS/modificarCamaraRequest" message="tns:modificarCamara" />
+      <output wsam:Action="http://general.services.transisoft.pucp.edu.pe/CamaraWS/modificarCamaraResponse" message="tns:modificarCamaraResponse" />
+    </operation>
+    <operation name="listarCamarasTodas">
+      <input wsam:Action="http://general.services.transisoft.pucp.edu.pe/CamaraWS/listarCamarasTodasRequest" message="tns:listarCamarasTodas" />
+      <output wsam:Action="http://general.services.transisoft.pucp.edu.pe/CamaraWS/listarCamarasTodasResponse" message="tns:listarCamarasTodasResponse" />
+    </operation>
+    <operation name="insertarCamara">
+      <input wsam:Action="http://general.services.transisoft.pucp.edu.pe/CamaraWS/insertarCamaraRequest" message="tns:insertarCamara" />
+      <output wsam:Action="http://general.services.transisoft.pucp.edu.pe/CamaraWS/insertarCamaraResponse" message="tns:insertarCamaraResponse" />
+    </operation>
+    <operation name="obtenerCamaraPorId">
+      <input wsam:Action="http://general.services.transisoft.pucp.edu.pe/CamaraWS/obtenerCamaraPorIdRequest" message="tns:obtenerCamaraPorId" />
+      <output wsam:Action="http://general.services.transisoft.pucp.edu.pe/CamaraWS/obtenerCamaraPorIdResponse" message="tns:obtenerCamaraPorIdResponse" />
+    </operation>
+    <operation name="eliminarCamara">
+      <input wsam:Action="http://general.services.transisoft.pucp.edu.pe/CamaraWS/eliminarCamaraRequest" message="tns:eliminarCamara" />
+      <output wsam:Action="http://general.services.transisoft.pucp.edu.pe/CamaraWS/eliminarCamaraResponse" message="tns:eliminarCamaraResponse" />
+    </operation>
+  </portType>
+  <binding name="CamaraWSPortBinding" type="tns:CamaraWS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="modificarCamara">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarCamarasTodas">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarCamara">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="obtenerCamaraPorId">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarCamara">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="CamaraWS">
+    <port name="CamaraWSPort" binding="tns:CamaraWSPortBinding">
+      <soap:address location="http://localhost:8080/TransiSoftWS/CamaraWS" />
+    </port>
+  </service>
+</definitions>

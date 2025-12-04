@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="192c3cfc-e7fb-4b88-aa5d-6587152afb07" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8080/TransiSoftWS/referencias.disco" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="CapturaWS.xsd" MetadataType="Schema" ID="8aef8105-fc70-430d-9e00-f21ea5e461e3" SourceId="1" SourceUrl="http://localhost:8080/TransiSoftWS/CapturaWS?xsd=1" />
+    <MetadataFile FileName="InfraccionWS.wsdl" MetadataType="Wsdl" ID="27d2c277-a35a-4992-a9d2-1461aa4b5732" SourceId="1" SourceUrl="http://localhost:8080/TransiSoftWS/InfraccionWS?WSDL" />
+    <MetadataFile FileName="PropietarioWS.xsd" MetadataType="Schema" ID="674d9cf0-029f-4084-b11c-21af34f203e4" SourceId="1" SourceUrl="http://localhost:8080/TransiSoftWS/PropietarioWS?xsd=1" />
+    <MetadataFile FileName="referencias.disco" MetadataType="Disco" ID="06becb0e-3b11-49dd-9d5f-d424748f597b" SourceId="1" SourceUrl="http://localhost:8080/TransiSoftWS/referencias.disco" />
+    <MetadataFile FileName="InfraccionWS.xsd" MetadataType="Schema" ID="f1abb075-e7f3-4996-bc01-e9758a575942" SourceId="1" SourceUrl="http://localhost:8080/TransiSoftWS/InfraccionWS?xsd=1" />
+    <MetadataFile FileName="CapturaWS.wsdl" MetadataType="Wsdl" ID="111800f2-931c-40e1-b8c5-23da4cd1672a" SourceId="1" SourceUrl="http://localhost:8080/TransiSoftWS/CapturaWS?WSDL" />
+    <MetadataFile FileName="VehiculoWS.wsdl" MetadataType="Wsdl" ID="882b3bd0-1af7-4956-88c8-b58aef7a3ac0" SourceId="1" SourceUrl="http://localhost:8080/TransiSoftWS/VehiculoWS?WSDL" />
+    <MetadataFile FileName="CamaraWS.wsdl" MetadataType="Wsdl" ID="8646cdbb-6b67-4d89-b9bc-778f2a874a6b" SourceId="1" SourceUrl="http://localhost:8080/TransiSoftWS/CamaraWS?WSDL" />
+    <MetadataFile FileName="VehiculoWS.xsd" MetadataType="Schema" ID="cfe2980f-d1a4-4348-9ba9-e3bc42c45316" SourceId="1" SourceUrl="http://localhost:8080/TransiSoftWS/VehiculoWS?xsd=1" />
+    <MetadataFile FileName="PropietarioWS.wsdl" MetadataType="Wsdl" ID="6319f1d7-bbab-44eb-a8a2-a8dbd6893262" SourceId="1" SourceUrl="http://localhost:8080/TransiSoftWS/PropietarioWS?WSDL" />
+    <MetadataFile FileName="CamaraWS.xsd" MetadataType="Schema" ID="46c2dd2e-1634-48e6-b5f0-3e4cefc931d9" SourceId="1" SourceUrl="http://localhost:8080/TransiSoftWS/CamaraWS?xsd=1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

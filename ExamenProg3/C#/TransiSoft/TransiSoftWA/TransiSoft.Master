@@ -1,0 +1,89 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="TransiSoft.master.cs" Inherits="TransiSoftWA.TransiSoft" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="Fonts/css/all.css" rel="stylesheet" />
+    <link href="Content/site.css" rel="stylesheet" />
+    
+    <script src="Scripts/bootstrap.js"></script>
+    <script src="Scripts/bootstrap.bundle.js"></script>
+    <script src="Scripts/jquery-3.7.1.js"></script>
+    <title>
+        <asp:ContentPlaceHolder ID="cph_title" runat="server">
+        </asp:ContentPlaceHolder>
+    </title>
+    <asp:ContentPlaceHolder ID="cph_Scripts" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <div class="container-fluid p-0 d-flex h-100">
+        <div id="bdSidebar"
+            class="d-flex flex-column  
+                flex-shrink-0  
+                p-3 bg-primary 
+                text-white offcanvas-md offcanvas-start">
+            <a href="Home.aspx" class="navbar-brand text-center">
+                <img src="images/pucp.png" width="150" />
+            </a>
+            <hr>
+            <ul class="mynav nav nav-pills flex-column mb-auto">
+                <li class="nav-item mb-1">
+                    <a href="ListaInfracciones.aspx"><i class="fa-solid fa-list"></i>
+                        Lista de Infracciones 
+                    </a>
+                </li>
+
+                <li class="nav-item mb-1">
+                    <a href="RegistroInfracciones.aspx"><i class="fa-solid fa-car-burst"></i>
+                        Registro de Infracciones                     
+                    </a>
+                </li> 
+                <li class="nav-item mb-1">
+                    <a href="ListaCapturas.aspx"><i class="fa-solid fa-camera-retro"></i>
+                        Lista de Capturas                     
+                    </a>
+                </li>
+
+            </ul>
+            <hr>
+            <div class="d-flex">
+                <i class="fa-solid fa-book  me-2"></i>
+                <h6 class="mt-1 mb-0">PUCP - Programación 3 </h6>
+            </div>
+        </div>
+
+
+        <div class="bg-light flex-fill">
+            <div class="p-2 d-md-none d-flex text-white bg-primary">
+                <a href="#" class="text-white"
+                    data-bs-toggle="offcanvas"
+                    data-bs-target="#bdSidebar">
+                    <i class="fa-solid fa-bars"></i>
+                </a>
+                <span class="ms-3">LOGO PUCP</span>
+            </div>
+
+
+            <nav class="navbar navbar-dark bg-primary">
+                <div class="container-fluid">
+                    <a class="navbar-brand d-sm-none d-md-block d-none d-sm-block">Sistema de Infracciones Vehiculares</a>
+
+                   
+                </div>
+            </nav>
+
+            <div class="p-4">
+                <form runat="server">
+                    <asp:ContentPlaceHolder ID="cph_Contenido" runat="server">
+                    </asp:ContentPlaceHolder>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

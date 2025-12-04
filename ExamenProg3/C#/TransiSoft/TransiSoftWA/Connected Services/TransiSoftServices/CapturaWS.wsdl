@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://general.services.transisoft.pucp.edu.pe/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="CapturaWS" targetNamespace="http://general.services.transisoft.pucp.edu.pe/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:8080/TransiSoftWS/CapturaWS?xsd=1" namespace="http://general.services.transisoft.pucp.edu.pe/" />
+    </xsd:schema>
+  </types>
+  <message name="modificarCaptura">
+    <part name="parameters" element="tns:modificarCaptura" />
+  </message>
+  <message name="modificarCapturaResponse">
+    <part name="parameters" element="tns:modificarCapturaResponse" />
+  </message>
+  <message name="insertarCaptura">
+    <part name="parameters" element="tns:insertarCaptura" />
+  </message>
+  <message name="insertarCapturaResponse">
+    <part name="parameters" element="tns:insertarCapturaResponse" />
+  </message>
+  <message name="listarCapturasTodas">
+    <part name="parameters" element="tns:listarCapturasTodas" />
+  </message>
+  <message name="listarCapturasTodasResponse">
+    <part name="parameters" element="tns:listarCapturasTodasResponse" />
+  </message>
+  <message name="obtenerCapturaPorId">
+    <part name="parameters" element="tns:obtenerCapturaPorId" />
+  </message>
+  <message name="obtenerCapturaPorIdResponse">
+    <part name="parameters" element="tns:obtenerCapturaPorIdResponse" />
+  </message>
+  <message name="eliminarCaptura">
+    <part name="parameters" element="tns:eliminarCaptura" />
+  </message>
+  <message name="eliminarCapturaResponse">
+    <part name="parameters" element="tns:eliminarCapturaResponse" />
+  </message>
+  <portType name="CapturaWS">
+    <operation name="modificarCaptura">
+      <input wsam:Action="http://general.services.transisoft.pucp.edu.pe/CapturaWS/modificarCapturaRequest" message="tns:modificarCaptura" />
+      <output wsam:Action="http://general.services.transisoft.pucp.edu.pe/CapturaWS/modificarCapturaResponse" message="tns:modificarCapturaResponse" />
+    </operation>
+    <operation name="insertarCaptura">
+      <input wsam:Action="http://general.services.transisoft.pucp.edu.pe/CapturaWS/insertarCapturaRequest" message="tns:insertarCaptura" />
+      <output wsam:Action="http://general.services.transisoft.pucp.edu.pe/CapturaWS/insertarCapturaResponse" message="tns:insertarCapturaResponse" />
+    </operation>
+    <operation name="listarCapturasTodas">
+      <input wsam:Action="http://general.services.transisoft.pucp.edu.pe/CapturaWS/listarCapturasTodasRequest" message="tns:listarCapturasTodas" />
+      <output wsam:Action="http://general.services.transisoft.pucp.edu.pe/CapturaWS/listarCapturasTodasResponse" message="tns:listarCapturasTodasResponse" />
+    </operation>
+    <operation name="obtenerCapturaPorId">
+      <input wsam:Action="http://general.services.transisoft.pucp.edu.pe/CapturaWS/obtenerCapturaPorIdRequest" message="tns:obtenerCapturaPorId" />
+      <output wsam:Action="http://general.services.transisoft.pucp.edu.pe/CapturaWS/obtenerCapturaPorIdResponse" message="tns:obtenerCapturaPorIdResponse" />
+    </operation>
+    <operation name="eliminarCaptura">
+      <input wsam:Action="http://general.services.transisoft.pucp.edu.pe/CapturaWS/eliminarCapturaRequest" message="tns:eliminarCaptura" />
+      <output wsam:Action="http://general.services.transisoft.pucp.edu.pe/CapturaWS/eliminarCapturaResponse" message="tns:eliminarCapturaResponse" />
+    </operation>
+  </portType>
+  <binding name="CapturaWSPortBinding" type="tns:CapturaWS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="modificarCaptura">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarCaptura">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarCapturasTodas">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="obtenerCapturaPorId">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarCaptura">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="CapturaWS">
+    <port name="CapturaWSPort" binding="tns:CapturaWSPortBinding">
+      <soap:address location="http://localhost:8080/TransiSoftWS/CapturaWS" />
+    </port>
+  </service>
+</definitions>

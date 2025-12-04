@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://general.services.transisoft.pucp.edu.pe/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="InfraccionWS" targetNamespace="http://general.services.transisoft.pucp.edu.pe/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:8080/TransiSoftWS/InfraccionWS?xsd=1" namespace="http://general.services.transisoft.pucp.edu.pe/" />
+    </xsd:schema>
+  </types>
+  <message name="obtenerInfraccionPorId">
+    <part name="parameters" element="tns:obtenerInfraccionPorId" />
+  </message>
+  <message name="obtenerInfraccionPorIdResponse">
+    <part name="parameters" element="tns:obtenerInfraccionPorIdResponse" />
+  </message>
+  <message name="insertarInfraccion">
+    <part name="parameters" element="tns:insertarInfraccion" />
+  </message>
+  <message name="insertarInfraccionResponse">
+    <part name="parameters" element="tns:insertarInfraccionResponse" />
+  </message>
+  <message name="eliminarInfraccion">
+    <part name="parameters" element="tns:eliminarInfraccion" />
+  </message>
+  <message name="eliminarInfraccionResponse">
+    <part name="parameters" element="tns:eliminarInfraccionResponse" />
+  </message>
+  <message name="modificarInfraccion">
+    <part name="parameters" element="tns:modificarInfraccion" />
+  </message>
+  <message name="modificarInfraccionResponse">
+    <part name="parameters" element="tns:modificarInfraccionResponse" />
+  </message>
+  <message name="listarInfraccionesTodas">
+    <part name="parameters" element="tns:listarInfraccionesTodas" />
+  </message>
+  <message name="listarInfraccionesTodasResponse">
+    <part name="parameters" element="tns:listarInfraccionesTodasResponse" />
+  </message>
+  <portType name="InfraccionWS">
+    <operation name="obtenerInfraccionPorId">
+      <input wsam:Action="http://general.services.transisoft.pucp.edu.pe/InfraccionWS/obtenerInfraccionPorIdRequest" message="tns:obtenerInfraccionPorId" />
+      <output wsam:Action="http://general.services.transisoft.pucp.edu.pe/InfraccionWS/obtenerInfraccionPorIdResponse" message="tns:obtenerInfraccionPorIdResponse" />
+    </operation>
+    <operation name="insertarInfraccion">
+      <input wsam:Action="http://general.services.transisoft.pucp.edu.pe/InfraccionWS/insertarInfraccionRequest" message="tns:insertarInfraccion" />
+      <output wsam:Action="http://general.services.transisoft.pucp.edu.pe/InfraccionWS/insertarInfraccionResponse" message="tns:insertarInfraccionResponse" />
+    </operation>
+    <operation name="eliminarInfraccion">
+      <input wsam:Action="http://general.services.transisoft.pucp.edu.pe/InfraccionWS/eliminarInfraccionRequest" message="tns:eliminarInfraccion" />
+      <output wsam:Action="http://general.services.transisoft.pucp.edu.pe/InfraccionWS/eliminarInfraccionResponse" message="tns:eliminarInfraccionResponse" />
+    </operation>
+    <operation name="modificarInfraccion">
+      <input wsam:Action="http://general.services.transisoft.pucp.edu.pe/InfraccionWS/modificarInfraccionRequest" message="tns:modificarInfraccion" />
+      <output wsam:Action="http://general.services.transisoft.pucp.edu.pe/InfraccionWS/modificarInfraccionResponse" message="tns:modificarInfraccionResponse" />
+    </operation>
+    <operation name="listarInfraccionesTodas">
+      <input wsam:Action="http://general.services.transisoft.pucp.edu.pe/InfraccionWS/listarInfraccionesTodasRequest" message="tns:listarInfraccionesTodas" />
+      <output wsam:Action="http://general.services.transisoft.pucp.edu.pe/InfraccionWS/listarInfraccionesTodasResponse" message="tns:listarInfraccionesTodasResponse" />
+    </operation>
+  </portType>
+  <binding name="InfraccionWSPortBinding" type="tns:InfraccionWS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="obtenerInfraccionPorId">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarInfraccion">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarInfraccion">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarInfraccion">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarInfraccionesTodas">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="InfraccionWS">
+    <port name="InfraccionWSPort" binding="tns:InfraccionWSPortBinding">
+      <soap:address location="http://localhost:8080/TransiSoftWS/InfraccionWS" />
+    </port>
+  </service>
+</definitions>

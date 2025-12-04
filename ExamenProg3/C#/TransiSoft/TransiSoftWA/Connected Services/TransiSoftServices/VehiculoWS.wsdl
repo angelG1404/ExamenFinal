@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://general.services.transisoft.pucp.edu.pe/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="VehiculoWS" targetNamespace="http://general.services.transisoft.pucp.edu.pe/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:8080/TransiSoftWS/VehiculoWS?xsd=1" namespace="http://general.services.transisoft.pucp.edu.pe/" />
+    </xsd:schema>
+  </types>
+  <message name="obtenerVehiculoPorPlaca">
+    <part name="parameters" element="tns:obtenerVehiculoPorPlaca" />
+  </message>
+  <message name="obtenerVehiculoPorPlacaResponse">
+    <part name="parameters" element="tns:obtenerVehiculoPorPlacaResponse" />
+  </message>
+  <message name="listarVehiculosTodos">
+    <part name="parameters" element="tns:listarVehiculosTodos" />
+  </message>
+  <message name="listarVehiculosTodosResponse">
+    <part name="parameters" element="tns:listarVehiculosTodosResponse" />
+  </message>
+  <message name="obtenerVehiculoPorId">
+    <part name="parameters" element="tns:obtenerVehiculoPorId" />
+  </message>
+  <message name="obtenerVehiculoPorIdResponse">
+    <part name="parameters" element="tns:obtenerVehiculoPorIdResponse" />
+  </message>
+  <message name="insertarVehiculo">
+    <part name="parameters" element="tns:insertarVehiculo" />
+  </message>
+  <message name="insertarVehiculoResponse">
+    <part name="parameters" element="tns:insertarVehiculoResponse" />
+  </message>
+  <message name="eliminarVehiculo">
+    <part name="parameters" element="tns:eliminarVehiculo" />
+  </message>
+  <message name="eliminarVehiculoResponse">
+    <part name="parameters" element="tns:eliminarVehiculoResponse" />
+  </message>
+  <message name="modificarVehiculo">
+    <part name="parameters" element="tns:modificarVehiculo" />
+  </message>
+  <message name="modificarVehiculoResponse">
+    <part name="parameters" element="tns:modificarVehiculoResponse" />
+  </message>
+  <portType name="VehiculoWS">
+    <operation name="obtenerVehiculoPorPlaca">
+      <input wsam:Action="http://general.services.transisoft.pucp.edu.pe/VehiculoWS/obtenerVehiculoPorPlacaRequest" message="tns:obtenerVehiculoPorPlaca" />
+      <output wsam:Action="http://general.services.transisoft.pucp.edu.pe/VehiculoWS/obtenerVehiculoPorPlacaResponse" message="tns:obtenerVehiculoPorPlacaResponse" />
+    </operation>
+    <operation name="listarVehiculosTodos">
+      <input wsam:Action="http://general.services.transisoft.pucp.edu.pe/VehiculoWS/listarVehiculosTodosRequest" message="tns:listarVehiculosTodos" />
+      <output wsam:Action="http://general.services.transisoft.pucp.edu.pe/VehiculoWS/listarVehiculosTodosResponse" message="tns:listarVehiculosTodosResponse" />
+    </operation>
+    <operation name="obtenerVehiculoPorId">
+      <input wsam:Action="http://general.services.transisoft.pucp.edu.pe/VehiculoWS/obtenerVehiculoPorIdRequest" message="tns:obtenerVehiculoPorId" />
+      <output wsam:Action="http://general.services.transisoft.pucp.edu.pe/VehiculoWS/obtenerVehiculoPorIdResponse" message="tns:obtenerVehiculoPorIdResponse" />
+    </operation>
+    <operation name="insertarVehiculo">
+      <input wsam:Action="http://general.services.transisoft.pucp.edu.pe/VehiculoWS/insertarVehiculoRequest" message="tns:insertarVehiculo" />
+      <output wsam:Action="http://general.services.transisoft.pucp.edu.pe/VehiculoWS/insertarVehiculoResponse" message="tns:insertarVehiculoResponse" />
+    </operation>
+    <operation name="eliminarVehiculo">
+      <input wsam:Action="http://general.services.transisoft.pucp.edu.pe/VehiculoWS/eliminarVehiculoRequest" message="tns:eliminarVehiculo" />
+      <output wsam:Action="http://general.services.transisoft.pucp.edu.pe/VehiculoWS/eliminarVehiculoResponse" message="tns:eliminarVehiculoResponse" />
+    </operation>
+    <operation name="modificarVehiculo">
+      <input wsam:Action="http://general.services.transisoft.pucp.edu.pe/VehiculoWS/modificarVehiculoRequest" message="tns:modificarVehiculo" />
+      <output wsam:Action="http://general.services.transisoft.pucp.edu.pe/VehiculoWS/modificarVehiculoResponse" message="tns:modificarVehiculoResponse" />
+    </operation>
+  </portType>
+  <binding name="VehiculoWSPortBinding" type="tns:VehiculoWS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="obtenerVehiculoPorPlaca">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarVehiculosTodos">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="obtenerVehiculoPorId">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarVehiculo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarVehiculo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarVehiculo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="VehiculoWS">
+    <port name="VehiculoWSPort" binding="tns:VehiculoWSPortBinding">
+      <soap:address location="http://localhost:8080/TransiSoftWS/VehiculoWS" />
+    </port>
+  </service>
+</definitions>

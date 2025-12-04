@@ -1,0 +1,13 @@
+BO\CamaraBO.class
+Impl\VehiculoBOImpl.class
+Impl\CapturaBOImpl.class
+Impl\CamaraBOImpl.class
+Impl\InfraccionBOImpl.class
+BO\InfraccionBO.class
+BO\PropietarioBO.class
+BO\CapturaBO.class
+BO\VehiculoPropietarioBO.class
+BO\VehiculoBO.class
+IBO\IBO.class
+Impl\VehiculoProductoBOImpl.class
+Impl\PropietarioBOImpl.class

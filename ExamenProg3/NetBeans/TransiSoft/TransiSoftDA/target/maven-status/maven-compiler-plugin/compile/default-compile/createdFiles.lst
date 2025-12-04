@@ -1,0 +1,13 @@
+DAO\VehiculoDAO.class
+DAO\PropietarioDAO.class
+Impl\VehiculoImpl.class
+DAO\InfraccionDAO.class
+Impl\VehiculoPropietarioImpl.class
+DAO\CapturaDAO.class
+Impl\CamaraImpl.class
+Impl\CapturaImpl.class
+Impl\PropietarioImpl.class
+DAO\VehiculoPropietarioDAO.class
+Impl\InfraccionImpl.class
+DAO\CamaraDAO.class
+IDAO\IDAO.class
